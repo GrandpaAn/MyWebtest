@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grandpa An</title>
+	<style>
+		a{TEXT-DECORATION:none}
+	</style>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="row">
+		<button type="button" class="btn btn-default"><div class="col-xs-6 col-sm-3"><a href="/">click here 首页</a></div></button>
+		<button type="button" class="btn btn-default"><div class="col-xs-6 col-sm-3"><a href="/string/">click here 教程列表</a></div></button>
+
+		<!-- <div class="clearfix visible-xs-block"></div> -->
+		<button type="button" class="btn btn-default"><div class="col-xs-6 col-sm-3"><a href="/info_dict/">click here 站点&内容</a></div></button>
+		<button type="button" class="btn btn-default"><div class="col-xs-6 col-sm-3"><a href="/List/">click here 显示列表</a></div></button>
+		<button type="button" class="btn btn-default"><div class="col-xs-6 col-sm-3"><a href="/athlete_list/">click here 运动员</a></div></button>
+		<button type="button" class="btn btn-default"><div class="col-xs-6 col-sm-3"><a href="/List/">click here 显示列表</a></div></button>
+		<button type="button" class="btn btn-default"><div class="col-xs-6 col-sm-3"><a href="/List/">click here 显示列表</a></div></button>
+
+
+	</div>
+
+<!-- 	<a href="/">click here 首页</a>
+	<a href="/string/">click here 教程列表</a>
+	<a href="/info_dict/">click here 站点&内容</a>
+	<a href="/List/">click here 显示列表</a> -->
+
+	<h1>Welcome to Grandpa An's home!!! </h1>
+	<div>{{string}}</div>
+	<div>
+		{% for i in TutorialList %}
+			{{i}}
+		{% endfor %}
+	</div>
+	<div>
+		{% for key, value in info_dict.items %}
+			{{ key }}: {{ value }}
+		{% endfor %} 
+	</div>
+	{% for item in List %}
+	    {{ item }}{% if not forloop.last %}, {% endif %}
+	{% endfor %}
+	
+	<ul>
+	{% for athlete in athlete_list %}
+	    <li>{{ athlete }}</li>
+	{% empty %}
+	    <li>抱歉，列表为空</li>
+	{% endfor %}
+	</ul>
+</body>
+</html>

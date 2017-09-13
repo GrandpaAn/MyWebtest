@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grandpa An test</title>
+</head>
+<body>
+	<h1>{{hello}}</h1>
+	{% include "nav.html" %}
+	<p>Grandpa An Django 测试。</p>
+
+	{% block mainbody %}
+		<p>original</p>
+	{% endblock %}
+
+	<ul>
+	{% for i in athlete %}
+		<div>{{ i }}</div>
+	{% endfor %}
+	</ul>
+</body>
+</html>

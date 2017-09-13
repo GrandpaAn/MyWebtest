@@ -1,0 +1,1 @@
+2017/08/27 23:39:58 [error] 15668#14224: *1 CreateFile() "F:\test\Django\nginx-1.12.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
