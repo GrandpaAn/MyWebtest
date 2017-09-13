@@ -1,1 +1,1 @@
-Grandpa An's Django project,It's useless.
+Grandpa An's Django project test.
