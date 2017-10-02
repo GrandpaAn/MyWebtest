@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Welcome to{% endblock title %} - Grandpa An's home</title>
+
+    {% block css %}
+        
+    {% endblock css %}
+
+    {% block js %}
+        
+    {% endblock js %}
+  </head>
+  <body>
+    {% block content %}
+        <h1>Grandpa An's home</h1>
+    {% endblock content %}
+
+    {% include "baidutongji.html" %}
+  </body>
+</html>

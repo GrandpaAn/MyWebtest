@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
@@ -43,9 +43,7 @@
  
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          {% for column in nav_display_columns %}
-              <li><a href="{{ column.get_absolute_url }}">{{ column.name }}</a></li>
-          {% endfor %}
+          {% include "base_simple.html" %}
         </ul>
       </div>
     </div>
@@ -54,7 +52,7 @@
     <div class="row clearfix">
         <div>
             {% block content %}
-                <h1>Grandpa An 新闻网</h1>
+                <h1>Grandpa An's home</h1>
             {% endblock content %}
         </div>
     </div>

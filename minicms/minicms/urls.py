@@ -17,15 +17,15 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 from news import views
-from tools import views
+# from tools import views
 from DjangoUeditor import urls as DjangoUeditor_urls
 
 urlpatterns = [
-	# url(r'^$', views.index, name='index'),
-	# url(r'^column/(?P<column_slug>[^/]+)/$', views.column_detail, name='column'),
-	# url(r'^news/(?P<pk>\d+)/(?P<article_slug>[^/]+)/$', views.article_detail, name='article'),
+	url(r'^$', views.index, name='index'),
+	url(r'^column/(?P<column_slug>[^/]+)/$', views.column_detail, name='column'),
+	url(r'^news/(?P<pk>\d+)/(?P<article_slug>[^/]+)/$', views.article_detail, name='article'),
  
     url(r'^admin/', include(admin.site.urls)),  
     url(r'^ueditor/', include('DjangoUeditor.urls')),
-    url(r'^qrcode/(.+)$', views.generate_qrcode, name='qrcode'),
+    # url(r'^qrcode/(.+)$', views.generate_qrcode, name='qrcode'),
 ]

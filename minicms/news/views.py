@@ -14,10 +14,12 @@ def index(request):
 	home_display_columns = Column.objects.filter(home_display=True)
 	nav_display_columns = Column.objects.filter(nav_display=True)
 	columns = Column.objects.all()
-	return render(request, 'index.html', {
-		'home_display_columns': home_display_columns,
-		'nav_display_columns': nav_display_columns,
-	})
+	return render(request, 'index.html', 
+			{
+				'nav_display_columns': nav_display_columns,
+				# 'home_display_columns': home_display_columns, 
+			},
+		)
 
 def column_detail(request, column_slug):
 	column = Column.objects.get(slug=column_slug)
